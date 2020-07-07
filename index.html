@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="description"
+      content="A website where you can get basic information about all the countries on the planet. You can search any country using the search bar. You can also filter the countries by regions (all, africa, americas, asia, europe, oceania). Searched countries can also be filterd by regions. Data is pulled from the REST Countries API. You can also switch between Dark Mode/Light Mode."
+    />
+    <meta name="author" content="Rahul Ranjan" />
+    <meta name="keywords" content="HTML, CSS, JavaScript, API, Responsive, Dark Mode, Light Mode" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Where in the world?</title>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+
+  <body>
+    <!-- Header -->
+    <header class="header text-color element-color header-dark">
+      <div class="header-div">
+        <h2 class="heading">Where in the world?</h2>
+        <button class="mode-btn text-color white-mode-btn">Dark Mode</button>
+      </div>
+    </header>
+
+    <section class="section bg-color">
+      <div class="main-div">
+        <!-- Input -->
+        <div class="input-div">
+          <input
+            type="text"
+            id="search"
+            name="search"
+            title="search"
+            placeholder="Search for a country..."
+            class="text-color white-search element-color"
+          />
+
+          <div class="element-color region-div">
+            <label class="text-color" for="region">Region:</label>
+            <select name="region" id="region" class="text-color white-region element-color">
+              <option value="all" selected>All</option>
+              <option value="africa">Africa</option>
+              <option value="americas">America</option>
+              <option value="asia">Asia</option>
+              <option value="europe">Europe</option>
+              <option value="oceania">Oceania</option>
+            </select>
+          </div>
+        </div>
+
+        <!-- Output -->
+        <div class="output-div"></div>
+      </div>
+
+      <div class="detail-div">
+        <div class="back-btn-div">
+          <button class="back-btn text-color element-color back-btn-dark">Back</button>
+        </div>
+
+        <div class="detail-output-div">
+          <img class="detail-img" />
+
+          <div class="detail-content text-color">
+            <div class="detail-content-heading">
+              <h1 class="detail-content-heading-name text-color"></h1>
+            </div>
+
+            <div class="detail-content-details">
+              <div class="detail-content-details-1 text-color"></div>
+              <div class="detail-content-details-2 text-color"></div>
+            </div>
+
+            <div class="detail-content-border">
+              <p class="text-color"><span>Border Countries:</span></p>
+              <div class="detail-content-border-btns text-color"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div class="top-scroller">
+      <div class="arrow-up">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          xmlns:xlink="http://www.w3.org/1999/xlink"
+          x="0px"
+          y="0px"
+          viewBox="0 0 492 492"
+          xml:space="preserve"
+          fill="#fff"
+        >
+          <g>
+            <g>
+              <path
+                d="M442.627,185.388L265.083,7.844C260.019,2.78,253.263,0,245.915,0c-7.204,0-13.956,2.78-19.02,7.844L49.347,185.388
+              c-10.488,10.492-10.488,27.568,0,38.052l16.12,16.128c5.064,5.06,11.82,7.844,19.028,7.844c7.204,0,14.192-2.784,19.252-7.844
+              l103.808-103.584v329.084c0,14.832,11.616,26.932,26.448,26.932h22.8c14.832,0,27.624-12.1,27.624-26.932V134.816l104.396,104.752
+              c5.06,5.06,11.636,7.844,18.844,7.844s13.864-2.784,18.932-7.844l16.072-16.128C453.163,212.952,453.123,195.88,442.627,185.388z"
+              />
+            </g>
+          </g>
+        </svg>
+      </div>
+    </div>
+
+    <script src="./bundle.js"></script>
+  </body>
+</html>
